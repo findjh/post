@@ -1,0 +1,1 @@
+import{_ as t,c as a,o,a as e}from"./app.afb6586f.js";const f=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"leetcode/\u5192\u6CE1.md"}'),s={name:"leetcode/\u5192\u6CE1.md"},r=e("ul",null,[e("li",null,"\u5192\u6CE1")],-1),c=[r];function n(_,l,d,i,p,m){return o(),a("div",null,c)}var h=t(s,[["render",n]]);export{f as __pageData,h as default};
