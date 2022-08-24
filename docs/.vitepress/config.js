@@ -1,5 +1,6 @@
 export default {
-  description: '2020_广州_程序员.',
+  description: '2020_广州_程序员',
+  base: '/post/',
   themeConfig: {
     siteTitle: "记录工作与生活.",
     logo: "/logo.jpeg",
