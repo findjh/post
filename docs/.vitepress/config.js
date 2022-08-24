@@ -1,7 +1,7 @@
 export default {
   description: '2020_广州_程序员.',
   themeConfig: {
-    siteTitle: "记录工作与生活",
+    siteTitle: "记录工作与生活.",
     logo: "/logo.jpeg",
     socialLinks: [
       { icon: "github", link: "https://github.com/findjh" }
