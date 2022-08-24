@@ -1,4 +1,5 @@
 name: Deploy
+base: /post/
 on:
   push:
     branches:
