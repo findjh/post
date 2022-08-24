@@ -23,6 +23,6 @@ features:
     title: 刷题
     details: 算法
   - icon: 🛠️ 
-    title: 吃喝玩乐
+    title: 吃喝玩乐.
     details: 生活
 ---
