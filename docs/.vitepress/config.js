@@ -13,15 +13,6 @@ export default {
     sidebar: {
       "/articles": [
         {
-          text: "webpack",
-          items: [
-            {
-              text: "环境变量",
-              link: "/articles/webpack/环境变量",
-            },
-          ],
-        },
-        {
           text: "vue",
           items: [
             {
@@ -31,9 +22,16 @@ export default {
           ],
         },
         {
+          text: "webpack",
+          items: [
+            {
+              text: "环境变量",
+              link: "/articles/webpack/环境变量",
+            },
+          ],
+        },
+        {
           text: "组件工程师",
-          // collapsible: true,
-          // collapsed:true,
           items: [
             {
               text: "组件库环境搭建",
