@@ -2,8 +2,7 @@ export default {
   description: '2020_广州_程序员',
   base: '/post/',
   themeConfig: {
-    siteTitle: "记录工作与生活.",
-    logo: "/logo.jpeg",
+    siteTitle: "记录工作与生活",
     socialLinks: [
       { icon: "github", link: "https://github.com/findjh" }
     ],
@@ -12,6 +11,7 @@ export default {
       { text: "算法", link: "/leetCode/冒泡" },
     ],
     sidebar: {
+      //路由包含key时，该路由页面就会展示key对应的侧边栏
       "/articles": [
         {
           text: "vue",
@@ -41,6 +41,15 @@ export default {
             { text: "gulp的使用", link: "/articles/gulp的使用" },
           ],
         },
+        {
+          text: "部署",
+          items: [
+            {
+              text: "nginx配置",
+              link: "/articles/nginx配置",
+            },
+          ],
+        }
       ],
       "/leetCode":[
         {
@@ -52,7 +61,7 @@ export default {
             },
           ],
         },
-      ]
+      ],
     }
   },
 }
