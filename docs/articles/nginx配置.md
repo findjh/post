@@ -39,6 +39,8 @@ location /myBase {
     index index.html;
 }
 ```
+
+
 - 同个域名多个项目配置
 
 ![](../public/1.png)
