@@ -2,10 +2,13 @@
 - nginx常用命令
 
 ![](../public/2.png)
+
+
 - root和alias的区别
-alias是一个目录别名的定义，root则是最上层目录的定义.<br>
-一直以为root是指的/var/www/image目录下，应该是/var/www/image/img/ <br>
-还有一个重要的区别是alias后面必须要用 `/` 结束，否则会找不到文件的.  而root则可有可无~~
+  alias是一个目录别名的定义，root则是最上层目录的定义.<br>
+  一直以为root是指的/var/www/image目录下，应该是/var/www/image/img/ <br>
+  还有一个重要的区别是alias后面必须要用 `/` 结束，否则会找不到文件的.  而root则可有可无~~
+
 ```
 // 访问/img/目录里面的文件时，ningx会自动去/var/www/image/目录找文件
 location /img/ {
