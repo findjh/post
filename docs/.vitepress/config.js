@@ -14,6 +14,19 @@ export default {
       //路由包含key时，该路由页面就会展示key对应的侧边栏
       "/articles": [
         {
+          text: "杂",
+          items: [
+            {
+              text: "文件上传",
+              link: "/articles/杂/文件上传",
+            },
+            {
+              text: "sku",
+              link: "/articles/杂/sku",
+            },
+          ],
+        },
+        {
           text: "vue",
           items: [
             {
