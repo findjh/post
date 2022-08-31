@@ -32,13 +32,12 @@ export default {
           ],
         },
         {
-          text: "组件工程师",
+          text: "TypeScript",
           items: [
             {
-              text: "组件库环境搭建",
-              link: "/articles/组件库环境搭建",
+              text: "any和unkown的区别",
+              link: "/articles/TypeScript/any和unkown的区别",
             },
-            { text: "gulp的使用", link: "/articles/gulp的使用" },
           ],
         },
         {
