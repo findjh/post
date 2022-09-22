@@ -23,6 +23,22 @@ export default {
             {
               text: "sku",
               link: "/articles/杂/sku",
+            }, 
+            {
+              text: "非对称密钥的传输",
+              link: "/articles/杂/非对称密钥的传输",
+            },
+            {
+              text: "刮刮乐",
+              link: "/articles/杂/刮刮乐",
+            },
+            {
+              text: "new关键词",
+              link: "/articles/杂/new",
+            },
+            {
+              text: "nginx配置",
+              link: "/articles/杂/nginx配置",
             },
           ],
         },
@@ -42,6 +58,10 @@ export default {
               text: "环境变量",
               link: "/articles/webpack/环境变量",
             },
+            {
+              text: "tapable",
+              link: "/articles/webpack/tapable",
+            },
           ],
         },
         {
@@ -51,17 +71,29 @@ export default {
               text: "any和unkown的区别",
               link: "/articles/TypeScript/any和unkown的区别",
             },
+            {
+              text: "Omit、Exclude、Pick的区别",
+              link: "/articles/TypeScript/Omit、Exclude、Pick的区别",
+            },
+            {
+              text: "判断元组",
+              link: "/articles/TypeScript/isTuple",
+            },
+            {
+              text: "type和interface的区别",
+              link: "/articles/TypeScript/type和interface的区别",
+            }
           ],
         },
         {
-          text: "部署",
+          text: "八股文",
           items: [
             {
-              text: "nginx配置",
-              link: "/articles/nginx配置",
+                text: "哈哈哈",
+                link: "/articles/八股文/哈哈哈",
             },
-          ],
-        }
+          ]
+        },
       ],
       "/leetCode":[
         {
