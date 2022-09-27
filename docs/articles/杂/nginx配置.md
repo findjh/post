@@ -1,7 +1,7 @@
 # nginx配置
 - nginx常用命令
 
-![](../public/2.png)
+![](../../public/2.png)
 - root和alias的区别
 alias是一个目录别名的定义，root则是最上层目录的定义.<br>
 一直以为root是指的/var/www/image目录下，应该是/var/www/image/img/ <br>
@@ -43,7 +43,7 @@ location /myBase {
 
 - 同个域名多个项目配置
 
-![](../public/1.png)
+![](../../public/1.png)
 
 
 

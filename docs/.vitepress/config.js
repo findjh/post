@@ -38,7 +38,7 @@ function getConfig(key,extname){
       items:value
     })
   })
-  console.log(JSON.stringify(ret))
+  // console.log(JSON.stringify(ret))
   return ret;
 }
 export default {
