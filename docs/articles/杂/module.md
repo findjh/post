@@ -1,0 +1,2 @@
+- es6 `静态` 模块（tree-shaking）可以在编译的时候进行分析
+- commonjs `动态`模块 在代码执行的时候引入模块（无法做tree-shaking） 

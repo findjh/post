@@ -40,3 +40,10 @@
     node yuhua
     react yuhua
 ```
+
+- interceptor 
+ 1. register : 每当你注册一个新的回调函数的时候触发
+ 2. tap : 每个回调函数触发之前都会调用一次
+ 3. call: 每个call只会触发一次，所有的回调只有一次
+
+- 
