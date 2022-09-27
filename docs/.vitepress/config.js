@@ -29,7 +29,7 @@ function getConfig(key,extname){
     if(!items){
       map.set(parentName,items = [])
     }
-    items.push({text:titleName,link:p.slice(p.indexOf(key)-1).replace(/`${path.sep}`/g,'/')})
+    items.push({text:titleName,link:p.slice(p.indexOf(key)-1).replace(/\\/g,'/')})
   })
   let ret = [];
   map.forEach((value,key)=>{
@@ -38,6 +38,7 @@ function getConfig(key,extname){
       items:value
     })
   })
+  console.log(JSON.stringify(ret))
   return ret;
 }
 export default {
@@ -50,13 +51,13 @@ export default {
     ],
     nav: [
       { text: "文章", link: "/articles/vue/pina和vuex" },
-      { text: "算法", link: "/leetCode/冒泡" },
+      { text: "算法", link: "/leetcode/冒泡" },
     ],
     sidebar: {
 
       //路由包含key时，该路由页面就会展示key对应的侧边栏
       "/articles":getConfig('articles','md'),
-      "/leetCode":getConfig('leetCode','md')
+      "/leetcode":getConfig('leetcode','md')
       // "/articles": [
       //   {
       //     text: "杂",
@@ -140,13 +141,13 @@ export default {
       //     ]
       //   },
       // ],
-      // "/leetCode":[
+      // "/leetcode":[
       //   {
       //     text: "排序",
       //     items: [
       //       {
       //         text: "冒泡",
-      //         link: "/leetCode/冒泡",
+      //         link: "/leetcode/冒泡",
       //       },
       //     ],
       //   },
