@@ -4,7 +4,7 @@ export default {
   description: '2020_广州_程序员',
   base: '/post/',
   title:'findjh',
-  titleTemplate: '找到我啦',
+  titleTemplate: '找到我啦!',
   lastUpdated: true,
   themeConfig: {
     siteTitle: "记录工作与生活", 
