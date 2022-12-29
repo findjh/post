@@ -1,0 +1,1 @@
+import{_ as s,c as n,o as a,b as l}from"./app.38fd55b8.js";const d=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"articles/\u6742/new.md","lastUpdated":1672294659000}'),o={name:"articles/\u6742/new.md"},p=l("",2),e=[p];function t(c,r,F,y,i,D){return a(),n("div",null,e)}var A=s(o,[["render",t]]);export{d as __pageData,A as default};
