@@ -1,0 +1,1 @@
+accept属性值： `image/*`  `image/png, image/jpeg`  `.png, .jpeg`(逗号分隔)
