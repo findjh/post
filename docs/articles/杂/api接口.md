@@ -1,1 +1,1 @@
-- //api.github.com/users
+- api.github.com/users
