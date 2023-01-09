@@ -37,10 +37,6 @@
 创建命令的格式为ng generate <type> [options]，可以简写为ng g <type>[options]
 
 ![image-20230109112838767](../../public/image-20230109112838767.png)
-
-<!-- ### Angular项目结构
-![image-20230109113145188](../../public/image-20230109113145188.png)
-![image-20230109113206688](../../public/image-20230109113206688.png) -->
 ### Angular 项目的启动过程
 
 ​	Angular项目的启动过程分为以下几步。
@@ -546,7 +542,19 @@ export class LogDirective implements OnInit {
 
 ​		由Angular开发的Web应用程序是通过引导根模块AppModule来启动的，引导过程还会创建bootstrap数组中列出的组件，并把它们逐个插入浏览器的DOM中。每个被引导的组件都是它自己的组件树的根组件。插入一个被引导的组件通常会触发一系列组件的创建并形成组件树。虽然也可以在主页面中放置多个组件，但是大多数Web应用程序只有一个组件树，并且只从一个根组件开始引导。这个根组件默认为AppComponent，并且位于根模块的bootstrap数组中。
 
+​		NgModule类是一个带有@NgModule()装饰器的类，也称为Angular模块。NgModule类把组件、指令和管道打包成内聚的功能块，每个功能块聚焦于一个特定区域、业务领域、工作流或通用工具。模块还可以把服务加到Web应用程序中。这些服务可能是内部开发的（如用户自己写的），或者来自外部（如Angular的路由和HTTP客户端）
 
+​	@NgModule()装饰器是一个函数，它接收一个元数据对象，该元数据对象的属性用来描述模块，其中最重要的属性如下。
+
+​		●declarations属性：**属于该模块的组件、指令或管道被定义在这个属性中，属性列表中的内容一般都是用户自己创建的**。
+
+​		●exports属性：导出某些类，以便其他的模块可以使用它们。
+
+​		●imports属性：导入其他模块，**导入的模块都是使用@NgModule()装饰器声明的**，如An gular内置模块BrowserModule或第三方的NgModule类。
+
+​		●providers属性：把提供Web应用程序级服务的提供商（Provider）定义在这个属性中，提供商负责创建对应的服务，以便Web应用程序中的任何组件都能使用它。
+
+​		●bootstrap属性：**Web应用程序的主视图，称为根组件。只有根模块才应该设置bootstrap属性**。
 
 
 
