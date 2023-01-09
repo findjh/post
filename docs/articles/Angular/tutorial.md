@@ -39,11 +39,8 @@
 ![image-20230109112838767](../../public/image-20230109112838767.png)
 
 ### Angular项目结构
-
 ![image-20230109113145188](../../public/image-20230109113145188.png)
-
 ![image-20230109113206688](../../public/image-20230109113206688.png)
-
 ### Angular 项目的启动过程
 
 ​	Angular项目的启动过程分为以下几步。
@@ -498,9 +495,44 @@ export class AppComponent {
 }
 ```
 
+**在指令中使用@HostBinding()装饰器绑定DOM属性**
 
+前面介绍了如何使用ElementRef对象的nativeElement属性来访问宿主元素，以及如何使用Renderer2对象操作其DOM属性。这么做需要额外注入底层的ElementRef对象和Renderer2对象。其实，Angular提供了一种简单的绑定DOM属性的实现方式，我们可以使用@HostBinding()装饰器绑定宿主元素上的DOM属性，从而处理DOM属性的值。
 
+```ts
+import { Directive, ElementRef, HostBinding, Input, OnInit, Renderer2 } from '@angular/core';
 
+@Directive({
+  selector: '[appLog]',
+  inputs: ['fontColor'],
+  host: {
+    '(click)': 'onClick($event)',
+    'hhh':'aaa'
+  }
+})
+export class LogDirective implements OnInit {
+  @HostBinding('style.color')
+  fontColor:string = '#000';
+  count: number = 1;
+  constructor(private elementRef: ElementRef, private renderer2: Renderer2) { }
+  ngOnInit(): void {
+    console.log('appLog Directive:', this.elementRef.nativeElement)
+    // this.renderer2.setStyle(this.elementRef.nativeElement, 'color', this.color)
+  }
+  onClick(event: Event) {
+    console.log(event);
+    this.renderer2.setProperty(this.elementRef.nativeElement, 'textContent', 'click me' + this.count)
+  }
+}
+
+```
+
+```ts
+//使用
+<button (click)="changeUsername()" appLog fontColor="red">改变用户名</button>
+```
+
+@HostBinding()装饰器声明的类属性名可以任意命名。换句话说，@HostBinding()装饰器通过类属性名将元数据的信息与类属性的值进行绑定，这时类属性名仅充当了桥梁的作用，因此类属性名可以任意命名，即上面的示例中的fontColor可以任意命名。
 
 
 
