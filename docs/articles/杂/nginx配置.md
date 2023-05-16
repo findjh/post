@@ -47,3 +47,16 @@ location /myBase {
 
 
 
+```
+# nginx配置
+location / {
+  # 不缓存html，防止程序更新后缓存继续生效
+  if ($request_filename ~* .*\.(?:htm|html)$) {
+    add_header Cache-Control "private, no-store, no-cache, must-revalidate, proxy-revalidate";
+    access_log on;
+  }
+  # 这里是vue打包文件dist内的文件的存放路径
+  root   /srv/www/project/;
+  index  index.html index.htm;
+}
+```
