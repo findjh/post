@@ -1,0 +1,1 @@
+import{_ as e,c as t,o as a}from"./app.34bb0d5a.js";const l=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"articles/Angular/\u6A21\u5757.md","lastUpdated":1698242819000}'),r={name:"articles/Angular/\u6A21\u5757.md"};function s(c,n,o,_,p,d){return a(),t("div")}var m=e(r,[["render",s]]);export{l as __pageData,m as default};

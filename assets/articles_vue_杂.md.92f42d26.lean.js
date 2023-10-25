@@ -1,0 +1,1 @@
+import{_ as s,c as n,o as a,d as l}from"./app.34bb0d5a.js";const i=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"articles/vue/\u6742.md","lastUpdated":1698242819000}'),p={name:"articles/vue/\u6742.md"},o=l("",2),e=[o];function t(c,r,F,y,D,A){return a(),n("div",null,e)}var d=s(p,[["render",t]]);export{i as __pageData,d as default};
