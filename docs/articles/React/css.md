@@ -6,9 +6,3 @@
    import styles from index.module.css
   <div className={styles.app}></div>
   ```
-
-  
-
-  
-
-  <div>
