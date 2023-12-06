@@ -1,6 +1,14 @@
 # nginx配置
 - nginx常用命令
 
+   systemctl status nginx
+
+   systemctl reload nginx
+
+   whereis nginx 查看安装路径
+   
+   cat /var/log/nginx/error.log
+
 ![](../../public/2.png)
 - root和alias的区别
 alias是一个目录别名的定义，root则是最上层目录的定义.<br>
@@ -60,3 +68,4 @@ location / {
   index  index.html index.htm;
 }
 ```
+
