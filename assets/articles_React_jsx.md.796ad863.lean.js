@@ -1,1 +1,0 @@
-import{_ as e,c as t,o as l,d as o}from"./app.34bb0d5a.js";const S=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"articles/React/jsx.md","lastUpdated":1698242819000}'),i={name:"articles/React/jsx.md"},a=o("",1),c=[a];function s(p,r,d,_,n,u){return l(),t("div",null,c)}var f=e(i,[["render",s]]);export{S as __pageData,f as default};
