@@ -69,3 +69,75 @@ location / {
 }
 ```
 
+### location匹配规则
+
+形式如下：
+
+``location [ = | ~ | ~* | ^~ ] uri { ... }``
+
+- **none**，如果没有修饰符，则将该位置解释为前缀匹配。这意味着给定的位置将根据请求URI的开头进行匹配，以确定匹配
+- `=`，代表精确匹配，完全相等即匹配
+- `~`，区分大小写的正则表达式匹配
+- `~*`，不区分大小写的正则表达式匹配
+- `^~`，普通字符匹配，如果该选项匹配，只匹配该选项
+- `/` 通用匹配, 如果没有其它匹配,任何请求都会匹配到
+
+匹配步骤如下：
+
+1. 精确匹配 =，如果匹配成功，搜索停止
+2. 前缀匹配，最长位置匹配，如果该匹配具有 ^~，搜索停止
+3. .正则匹配，按配置文件中定义的顺序进行匹配。
+4. 如果第 3 条规则产生匹配的话，结果被使用。否则，使用第 2 条规则的结果。
+
+
+
+```js
+server {
+    listen 12080;
+    server_name abc.com;
+
+    access_log  /var/log/nginx/test.access.log;
+    error_log   /var/log/nginx/test.error.log;
+
+    location ~* \.png$ {
+        return 402;
+    }
+
+    location / {
+        return 400;
+    }
+
+    location /static/js/css/ {
+        return 405;
+    }
+
+    location ^~ /static/ {
+        return 401;
+    }
+
+    location ^~ /static/js/ {
+        return 404;
+    }
+
+    location = /static/abc.png {
+        return 403;
+    }
+}
+```
+
+解答：
+
+/static/js/css/4.png 返回 402
+
+```js
+405 、401 、404 这三个都属于前缀模式匹配。/static/js/css/4.png 同时匹配到了这三个前缀模式，当同时匹配到多个前缀模式时，需要按最长匹配规则进行选取，即最终会命中 405 。
+而 405 没有阻止继续匹配正则(既没有^~, 搜索不会停止)，所以会继续匹配正则模式，而正则模式就是 402 那个，所以会返回 402
+```
+
+/static/js/4.png 返回 404
+
+/static/js/css6/4.png  返回 404
+
+https://www.v2ex.com/t/1002226
+
+https://nginx.viraptor.info/

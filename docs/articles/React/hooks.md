@@ -35,9 +35,11 @@
 ### useRef
 
 1. useRef返回一个可变的ref对象， 其 `.current`属性被初始化为传入的参数。
-2. 返回的ref对象在组件的整个生命周期内保持不变
+2. 被引用对象的值在重新渲染之间保持不变
 
 ### useLayoutEffect
 
 1. 数据改变后, render(渲染) layout(布局)， 再执行useLayoutEffect，然后再paint(绘制到屏幕上)，然后再在某个空闲的时间点执行useEffect
 2. 会阻塞渲染
+
+### forwardRef + useImperativeHandle

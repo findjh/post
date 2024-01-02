@@ -13,7 +13,7 @@ export default {
       { icon: "github", link: "https://github.com/findjh" }
     ],
     nav: [
-      { text: "文章", link: "/articles/TypeScript/类型推断" },
+      { text: "文章", link: "/articles/CSS/循环轮播.html" },
       { text: "算法", link: "/leetcode/冒泡" },
     ],
     sidebar: {

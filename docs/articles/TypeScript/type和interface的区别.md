@@ -1,3 +1,15 @@
+- & 交叉类型  https://typescript.bootcss.com/advanced-types.html
+
+  交叉类型是将多个类型合并为一个类型。 这让我们可以把现有的多种类型叠加到一起成为一种类型，它包含了所需的所有类型的特性
+
+  例如，Person & Serializable & Loggable同时是Person和Serializable和Loggable。 就是说这个类型的对象同时拥有了这三种类型的成员。
+
+- | 联合类型
+
+  联合类型表示一个值可以是几种类型之一。 我们用竖线（|）分隔每个类型，所以number | string | boolean表示一个值可以是number，string，或boolean。
+
+  如果一个值是联合类型，我们只能访问此联合类型的所有类型里共有的成员。
+
 - 两者都可以用来描述对象或函数的类型，但是语法不同
 ```js
 // interface
