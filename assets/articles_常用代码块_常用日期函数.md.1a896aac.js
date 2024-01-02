@@ -1,0 +1,28 @@
+import{_ as s,o as a,c as n,d as l}from"./app.91d29e6e.js";const D=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"articles/\u5E38\u7528\u4EE3\u7801\u5757/\u5E38\u7528\u65E5\u671F\u51FD\u6570.md","lastUpdated":1704204110000}'),p={name:"articles/\u5E38\u7528\u4EE3\u7801\u5757/\u5E38\u7528\u65E5\u671F\u51FD\u6570.md"},o=l(`<ul><li><p>js\u751F\u6210\u65E5\u671F\uFF0C\u6628\u5929\u3001\u524D\u5929\u3001\u4ECA\u5929\u3001\u660E\u5929\u3001\u4E00\u5468\u540E\u65E5\u671F</p><div class="language-js"><span class="copy"></span><pre><code><span class="line"><span style="color:#676E95;font-style:italic;">/**</span></span>
+<span class="line"><span style="color:#676E95;font-style:italic;">* \u6309\u751F\u6210\u65F6\u95F4</span></span>
+<span class="line"><span style="color:#676E95;font-style:italic;">* </span><span style="color:#89DDFF;font-style:italic;">@</span><span style="color:#C792EA;font-style:italic;">param</span><span style="color:#676E95;font-style:italic;"> </span><span style="color:#A6ACCD;font-style:italic;">int</span><span style="color:#676E95;font-style:italic;"> day \u8981\u6307\u5B9A\u7684\u5929\u6570</span></span>
+<span class="line"><span style="color:#676E95;font-style:italic;">*/</span></span>
+<span class="line"><span style="color:#C792EA;">function</span><span style="color:#A6ACCD;"> </span><span style="color:#82AAFF;">dateTime2Day</span><span style="color:#89DDFF;">(</span><span style="color:#A6ACCD;">day</span><span style="color:#89DDFF;">){</span></span>
+<span class="line"><span style="color:#89DDFF;">    </span><span style="color:#676E95;font-style:italic;">//\u4ECA\u5929\u7684\u65F6\u95F4\u6233 + \u5929\u6570</span></span>
+<span class="line"><span style="color:#F07178;">    </span><span style="color:#89DDFF;font-style:italic;">return</span><span style="color:#F07178;"> </span><span style="color:#89DDFF;">new</span><span style="color:#F07178;"> </span><span style="color:#FFCB6B;">Date</span><span style="color:#F07178;">()</span><span style="color:#89DDFF;">.</span><span style="color:#82AAFF;">getTime</span><span style="color:#F07178;">() </span><span style="color:#89DDFF;">+</span><span style="color:#F07178;"> </span><span style="color:#F78C6C;">60</span><span style="color:#F07178;"> </span><span style="color:#89DDFF;">*</span><span style="color:#F07178;"> </span><span style="color:#F78C6C;">60</span><span style="color:#F07178;"> </span><span style="color:#89DDFF;">*</span><span style="color:#F07178;"> </span><span style="color:#F78C6C;">1000</span><span style="color:#F07178;"> </span><span style="color:#89DDFF;">*</span><span style="color:#F07178;"> </span><span style="color:#F78C6C;">24</span><span style="color:#F07178;"> </span><span style="color:#89DDFF;">*</span><span style="color:#F07178;"> </span><span style="color:#82AAFF;">parseInt</span><span style="color:#F07178;">(</span><span style="color:#A6ACCD;">day</span><span style="color:#F07178;">)</span></span>
+<span class="line"><span style="color:#89DDFF;">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#676E95;font-style:italic;">// \u6628\u5929</span></span>
+<span class="line"><span style="color:#82AAFF;">dateTime2Day</span><span style="color:#A6ACCD;">(</span><span style="color:#89DDFF;">-</span><span style="color:#F78C6C;">1</span><span style="color:#A6ACCD;">)</span></span>
+<span class="line"><span style="color:#676E95;font-style:italic;">// \u524D\u5929</span></span>
+<span class="line"><span style="color:#82AAFF;">dateTime2Day</span><span style="color:#A6ACCD;">(</span><span style="color:#89DDFF;">-</span><span style="color:#F78C6C;">2</span><span style="color:#A6ACCD;">)</span></span>
+<span class="line"><span style="color:#676E95;font-style:italic;">// \u5927\u524D\u5929</span></span>
+<span class="line"><span style="color:#82AAFF;">dateTime2Day</span><span style="color:#A6ACCD;">(</span><span style="color:#89DDFF;">-</span><span style="color:#F78C6C;">3</span><span style="color:#A6ACCD;">)</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#676E95;font-style:italic;">// \u4ECA\u5929</span></span>
+<span class="line"><span style="color:#82AAFF;">dateTime2Day</span><span style="color:#A6ACCD;">(</span><span style="color:#F78C6C;">0</span><span style="color:#A6ACCD;">)</span></span>
+<span class="line"><span style="color:#676E95;font-style:italic;">// \u660E\u5929</span></span>
+<span class="line"><span style="color:#82AAFF;">dateTime2Day</span><span style="color:#A6ACCD;">(</span><span style="color:#F78C6C;">1</span><span style="color:#A6ACCD;">)</span></span>
+<span class="line"><span style="color:#676E95;font-style:italic;">// \u540E\u5929</span></span>
+<span class="line"><span style="color:#82AAFF;">dateTime2Day</span><span style="color:#A6ACCD;">(</span><span style="color:#F78C6C;">2</span><span style="color:#A6ACCD;">)</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#676E95;font-style:italic;">// \u4E00\u5468\u540E</span></span>
+<span class="line"><span style="color:#82AAFF;">dateTime2Day</span><span style="color:#A6ACCD;">(</span><span style="color:#F78C6C;">7</span><span style="color:#A6ACCD;">)</span></span>
+<span class="line"><span style="color:#676E95;font-style:italic;">// \u4E00\u5468\u524D</span></span>
+<span class="line"><span style="color:#82AAFF;">dateTime2Day</span><span style="color:#A6ACCD;">(</span><span style="color:#89DDFF;">-</span><span style="color:#F78C6C;">7</span><span style="color:#A6ACCD;">)</span></span>
+<span class="line"></span></code></pre></div></li></ul>`,1),e=[o];function t(c,y,r,i,F,C){return a(),n("div",null,e)}var _=s(p,[["render",t]]);export{D as __pageData,_ as default};
