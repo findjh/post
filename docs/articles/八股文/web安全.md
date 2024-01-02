@@ -10,15 +10,5 @@
 
 - csrf跨域请求伪造：伪造用户请求向网站发起恶意请求
 
-  ![image-20231208232439785](D:\Project\findjh\docs\public\image-20231208232439785.png)
-
-
-
-![image-20231208232601328](D:\Project\findjh\docs\public\image-20231208232601328.png)
-
 - ddos
-
-  ![image-20231208232937681](D:\Project\findjh\docs\public\image-20231208232937681.png)
-
-![image-20231208234630447](D:\Project\findjh\docs\public\image-20231208234630447.png)
 
