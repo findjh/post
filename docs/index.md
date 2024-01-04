@@ -2,8 +2,8 @@
 layout: home
 
 hero:
-  name: findjh的博客
-  text: 随便写点啥
+  name: findjh
+  text: Life Live Laugh
   tagline: 记录时间
   image:
     alt: findjh
