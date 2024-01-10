@@ -1,0 +1,1 @@
+import{_ as e,o as t,c as l,d as i}from"./app.c627fd45.js";const m=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"articles/React/index.md","lastUpdated":1704919079000}'),o={name:"articles/React/index.md"},a=i("",3),r=[a];function p(c,s,n,d,u,h){return t(),l("div",null,r)}var f=e(o,[["render",p]]);export{m as __pageData,f as default};
