@@ -1,1 +1,0 @@
-import{_ as e,o as l,c as i,d as t}from"./app.c627fd45.js";const f=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"articles/node/APM.md","lastUpdated":1704914732000}'),a={name:"articles/node/APM.md"},p=t("",1),o=[p];function r(n,s,_,c,d,u){return l(),i("div",null,o)}var A=e(a,[["render",r]]);export{f as __pageData,A as default};
