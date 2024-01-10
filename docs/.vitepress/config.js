@@ -3,7 +3,7 @@ const fs = require('fs');
 export default {
   description: '2020_广州_程序员',
   base: '/',
-  title:'findjh',
+  title:'findjh_blog',
   titleTemplate: '找到我啦!',
   lastUpdated: true,
   themeConfig: {
