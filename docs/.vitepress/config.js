@@ -2,7 +2,7 @@ const path = require('path');
 const fs = require('fs');
 export default {
   description: '2020_广州_程序员',
-  base: '/post/',
+  base: '/',
   title:'findjh',
   titleTemplate: '找到我啦!',
   lastUpdated: true,
