@@ -15,13 +15,13 @@ hero:
       text: View on GitHub
       link: https://github.com/findjh
 
-features:
-  - icon: ⚡️
-    title: 杂
-    details: 文章
-    link: articles/地图/地图效果
-  - icon: 🖖
-    title: 刷题
-    details: 算法
-    link: articles/地图/地图效果
+# features:
+#   - icon: ⚡️
+#     title: 杂
+#     details: 文章
+#     link: /articles/CSS/循环轮播.html
+#   - icon: 🖖
+#     title: 刷题
+#     details: 算法
+#     link: /articles/CSS/循环轮播.html
 ---
