@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            position: relative;
+            width: 69vw;
+            --exposure: 0px;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        .img-overlay {
+            position: absolute;
+            inset: 0;
+        }
+
+        .img-overlay img {
+            width: 100%;
+            clip-path: inset(0 var(--exposure) 0 0);
+        }
+
+        .divider {
+            width: 1px;
+            height: 100%;
+            background-color: #666;
+            position: absolute;
+            top: 0;
+            right: var(--exposure)
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <img class="bottom" src="./public/girl-14-2.jpg">
+        <div class="img-overlay" onmousemove="handleMouseMove(event)">
+            <img src="./public/girl-14.webp">
+        </div>
+        <div class="divider"></div>
+    </div>
+</body>
+<script>
+    const box = document.querySelector('.img-overlay');
+    const container = document.querySelector('.container');
+    function handleMouseMove(e) {
+        const exposure = e.currentTarget.clientWidth - e.offsetX;
+        container.style.setProperty('--exposure', `${exposure}px`)
+    }
+</script>
+
+</html>
