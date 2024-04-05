@@ -36,3 +36,29 @@
 - [getDerivedStateFromProps](https://www.runoob.com/react/react-ref-getderivedstatefromprops.html)
 
 - [getSnapshotBeforeUpdate](https://blog.csdn.net/a772304419/article/details/134746958)
+
+- useState 特点
+
+  - 异步更新
+
+  - 会触发组件的更新,无论值有没有被jsx使用。 所以一个变量如果没有被jsx使用，就不要用useState管理它,可以用useRef
+
+  - 可以会被合并，比如
+
+    ```jsx
+    const [count, setCount] = useState(0)
+    function add(){
+        setCount(count+1);
+        setCount(count+1);
+        setCount(count+1);
+        
+    }
+    // 实际只会+1，不会count一直引用的是0
+    ```
+
+    
+
+- hooks的三条使用规则：
+  - 必须useXxx格式来命名
+  - 只能在函数组件内或者自定义hooks中使用
+  - 必须保证每次调用的顺序一致（不能放在if, for中使用）

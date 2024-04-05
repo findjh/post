@@ -10,7 +10,7 @@ hero:
   actions:
     - theme: brand
       text: 快来快来
-      link: /articles/React/redux
+      link: /articles/CSS/循环轮播
     - theme: alt
       text: View on GitHub
       link: https://github.com/findjh
