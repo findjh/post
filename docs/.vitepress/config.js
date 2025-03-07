@@ -3,12 +3,12 @@ const fs = require('fs');
 export default {
   description: '2020_广州_程序员',
   base: '/',
-  title:'findjh_blog',
+  title: 'findjh_blog',
   titleTemplate: '找到我啦!',
   lastUpdated: true,
   themeConfig: {
-    siteTitle: "记录工作与生活", 
-    lastUpdatedText: 'Updated Date',
+    siteTitle: "记录工作与生活",
+    lastUpdatedText: '最后更新时间',
     socialLinks: [
       { icon: "github", link: "https://github.com/findjh" }
     ],
@@ -18,8 +18,8 @@ export default {
     ],
     sidebar: {
       //路由包含key时，该路由页面就会展示key对应的侧边栏
-      "/articles":getConfig('articles','md'),
-      "/leetcode":getConfig('leetcode','md')
+      "/articles": getConfig('articles', 'md'),
+      "/leetcode": getConfig('leetcode', 'md')
       // "/leetcode":[
       //   {
       //     text: "排序",
@@ -35,42 +35,42 @@ export default {
   },
 }
 
-function getFilePath(targetDir,extname){
+function getFilePath(targetDir, extname) {
   let pathArr = []
   const files = fs.readdirSync(targetDir)
-  files.forEach(filename=>{
-    let file = path.join(targetDir,filename);
+  files.forEach(filename => {
+    let file = path.join(targetDir, filename);
     let stat = fs.statSync(file);
     let isDir = stat.isDirectory();
-    if(isDir){
-      let ret = getFilePath(file,extname);
+    if (isDir) {
+      let ret = getFilePath(file, extname);
       pathArr.push(...ret)
-    }else{
-      if(path.extname(file) === `.${extname}`){
+    } else {
+      if (path.extname(file) === `.${extname}`) {
         pathArr.push(file)
       }
     }
   })
   return pathArr;
 }
-function getConfig(key,extname){
-  let paths = getFilePath(path.join(__dirname,`../${key}`),extname);
+function getConfig(key, extname) {
+  let paths = getFilePath(path.join(__dirname, `../${key}`), extname);
   let map = new Map();
-  paths.forEach(p=>{
+  paths.forEach(p => {
     let arr = p.split(path.sep);
     let titleName = arr.pop();
     let parentName = arr.pop();
     let items = map.get(parentName)
-    if(!items){
-      map.set(parentName,items = [])
+    if (!items) {
+      map.set(parentName, items = [])
     }
-    items.push({text:titleName,link:p.slice(p.indexOf(key)-1).replace(/\\/g,'/')})
+    items.push({ text: titleName, link: p.slice(p.indexOf(key) - 1).replace(/\\/g, '/') })
   })
   let ret = [];
-  map.forEach((value,key)=>{
+  map.forEach((value, key) => {
     ret.push({
-      text:key,
-      items:value
+      text: key,
+      items: value
     })
   })
   // console.log(JSON.stringify(ret))
