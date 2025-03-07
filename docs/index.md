@@ -4,7 +4,7 @@ layout: home
 hero:
   name: findjh
   text: Life Live Laugh
-  tagline: 记录时间
+  tagline: 记录时间～
   image:
     alt: findjh
   actions:
@@ -14,7 +14,6 @@ hero:
     - theme: alt
       text: View on GitHub
       link: https://github.com/findjh
-
 # features:
 #   - icon: ⚡️
 #     title: 杂
